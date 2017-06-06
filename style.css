@@ -1,5 +1,4 @@
 #headNavBar{
-	background: red;
 	color: #ffffff;
 	font-family: Helvetica;
 	font-weight: bold;
@@ -8,7 +7,8 @@
 	border: black;
 	text-align: center;
 	background: yellow;
-	padding: 40px;
+	padding-top: 20px;
+	margin-bottom: 10px;
 	
 }
 .text{
@@ -16,7 +16,6 @@
 	font-weight: bolder;
 }
 #schedule{
-	background: lightblue;
 	font-weight: bold;
 	text-align: center;
 }
@@ -25,10 +24,18 @@
 }
 
 #forms{
+	border: black;
 	background: lightgray;
 	padding: 10px;
 }
 h1 {
+	text-align: center;
+}
+h3{
+	text-align: center;
+	font-weight: bold;
+}
+.panelTitle{
 	text-align: center;
 }
 

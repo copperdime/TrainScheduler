@@ -1,7 +1,7 @@
-// After user enters values and clicks submit, values are 
+// After user enters values and clicks submit, values are then appended to the div
    
 
-    $("#add-train").on("click", function(event) {
+    $("#add-user").on("click", function(event) {
       event.preventDefault();
 
       // Capture User Inputs and store into variables
@@ -10,6 +10,23 @@
       var trainTime = $("#trainTime-input").val().trim();
       var frequency = $("#frequency-input").val().trim();
 
-      var trainInfo = [trainName, destination, trainTime, frequency, minutesAway];
-      trainInfo.append();
+      console.log(trainName);
+      console.log(destination);
+      console.log(trainTime);
+      console.log(frequency);
+
+      // Emptying values for listed input fields
+      $("#postTrainName").html();
+      $("#postDestination").html();
+      $("#postFirstTrain").html();
+      $("#postFrequency").html();
+
+      // collecting user input info and assigning values to fields
+      $("#postTrainName").html(trainName);
+      $("#postDestination").html(destination);
+      $("#postFirstTrain").html(trainTime);
+      $("#postFrequency").html(frequency);
+
+      // trainName.appendTo(#postTrainName);
+      // trainInfo.append();
 
