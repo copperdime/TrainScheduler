@@ -1,0 +1,37 @@
+#headNavBar{
+	background: red;
+	color: #ffffff;
+	font-family: Helvetica;
+	font-weight: bold;
+}
+.titleBanner {
+	border: black;
+	text-align: center;
+	background: yellow;
+	padding: 40px;
+	
+}
+.text{
+	clear: all;
+	font-weight: bolder;
+}
+#schedule{
+	background: lightblue;
+	font-weight: bold;
+	text-align: center;
+}
+.topics{
+	background:plum;
+}
+
+#forms{
+	background: lightgray;
+	padding: 10px;
+}
+h1 {
+	text-align: center;
+}
+
+.addtrain{
+	border: blue;
+}
