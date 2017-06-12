@@ -8,6 +8,10 @@
 
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
 </head>
 <body>
 	<div class= "container">
@@ -39,30 +43,25 @@
 		            <h3 class="panel-title">Current Train Schedule</h3>
 		        </div>
 				<!-- Current Train Schedule Section -->
-						<div class="row">
+						<div class="row" id="train-list">
 							<div class="col-md-3" id="trainName">
-							<p> Train Name </p>
-							<p id="postTrainName">Amtrak</p>
+								<p> Train Name </p>
 							</div>
-							
+
 							<div class="col-md-2" id="destination">
 							<p> Destination </p>
-							<p id="postDestination">San Francisco</p>
 							</div>
 
 							<div class="col-md-2" id="firstTrain">
 							<p> First Train time </p>
-							<p id="postfirstTrain">12:00</p>
 							</div>
 
 							<div class="col-md-2" id="frequency">
 							<p> Frequency (mins) </p>
-							<p id="postFrequency">3:00</p>
 							</div>
 
 							<div class="col-md-3" id="minutes">
 							<p> Minutes Away </p>
-							<p id="postMinutes">unknown</p>
 							</div>
 						</div>
 				
@@ -85,21 +84,21 @@
 			        	<form role="form">
 				            <div class="form-group">
 				            	<label for="trainName-input">Train Name:</label>
-				                <input class="form-control" id="trainName-input" type="name">
+				                <input class="form-control" id="trainName-input" type="text">
 				            </div>
 				            <div class="form-group">
 				                <label for="destination-input">Destination:</label>
-				                <input class="form-control" id="destination-input" type="name">
+				                <input class="form-control" id="destination-input" type="text">
 				            </div>
 				            <div class="form-group">
 				                <label for="trainTime-input">First Train time (HH:mm - military time):</label>
-				                <input class="form-control" id="trainTime-input" type="time">
+				                <input class="form-control" id="trainTime-input" type="text">
 				            </div>
 				            <div class="form-group">
 				                <label for="frequency-input">Frequency(min):</label>
-				                <input class="form-control" id="frequency-input" type="datetime">
+				                <input class="form-control" id="frequency-input" type="text">
 				            </div>
-				              <button class="btn btn-default" id="add-user" type="submit">Submit</button>
+				              <button class="btn btn-default" id="add-entry" type="submit">Submit</button>
 				        </form>
 				       </div>
 				</div>
@@ -110,6 +109,7 @@
 	
 
 	</div>
-
+	<script src="app2.js" types="text/JavaScript"></script>
+	
 </body>
 </html>
