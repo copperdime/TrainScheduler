@@ -19,6 +19,7 @@
       var destination = "";
       var trainTime = "";
       var frequency = "";
+      var minutesAway = "";
 
     $('#add-entry').on('click', function(event) {
       event.preventDefault();
@@ -30,12 +31,15 @@
       trainTime = $('#trainTime-input').val().trim();
       frequency = $('#frequency-input').val().trim();
 
+      // Calculating minutes away
+      minutesAway = (Math.floor(Math.random() * (frequency - 1)) + 1);
 
        var train = {};
 		      train.trainName = trainName;
 		      train.destination = destination;
 		      train.trainTime = trainTime;
 		      train.frequency = frequency;
+		      train.minutesAway = minutesAway;
 
       // pushing trains object into the database
       database.ref().push(train);
@@ -49,13 +53,14 @@
       console.log(childSnapshot.val().destination);
       console.log(childSnapshot.val().trainTime);
       console.log(childSnapshot.val().frequency);
+      console.log(childSnapshot.val().minutesAway);
   
  	 $("#train-list").append("<div class=\"row\">"+
         "<div class=\"col-sm-3\">" + childSnapshot.val().trainName   + "</div>" +
         "<div class=\"col-sm-2\">" + childSnapshot.val().destination + "</div>" +
-        "<div class=\"col-sm-2\">" + childSnapshot.val().frequency   + "</div>" +
-        "<div class=\"col-sm-2\">" + childSnapshot.val().trainTime   + "</div>"+
-        "<div class=\"col-sm-3\">" + childSnapshot.val().frequency   + " </div></div>");
+        "<div class=\"col-sm-2\">" + childSnapshot.val().trainTime   + "</div>" +
+        "<div class=\"col-sm-2\">" + childSnapshot.val().frequency   + "</div>"+
+        "<div class=\"col-sm-3\">" + childSnapshot.val().minutesAway   + " </div></div>");
        
 
     // Handle the errors
@@ -65,6 +70,7 @@
 
 	
     		// calculation of minutes away
+
     // 		var currentTime = moment().format('LT'); 
 				// console.log(currentTime);
 			
