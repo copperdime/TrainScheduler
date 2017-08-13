@@ -32,9 +32,9 @@
 
 
        var train = {};
-		      train.name = trainName;
+		      train.trainName = trainName;
 		      train.destination = destination;
-		      train.time = trainTime;
+		      train.trainTime = trainTime;
 		      train.frequency = frequency;
 
       // pushing trains object into the database
@@ -55,8 +55,8 @@
         "<div class=\"col-sm-2\">" + childSnapshot.val().destination + "</div>" +
         "<div class=\"col-sm-2\">" + childSnapshot.val().frequency   + "</div>" +
         "<div class=\"col-sm-2\">" + childSnapshot.val().trainTime   + "</div>"+
-        "<div class=\"col-sm-3\">" + childSnapshot.val().frequency   + " </div>" +
-       "</div>")
+        "<div class=\"col-sm-3\">" + childSnapshot.val().frequency   + " </div></div>");
+       
 
     // Handle the errors
     }, function(errorObject) {
